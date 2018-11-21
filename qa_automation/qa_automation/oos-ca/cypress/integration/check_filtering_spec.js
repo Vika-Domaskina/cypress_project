@@ -1,6 +1,6 @@
 describe('Check filtering on the page', function() {
     beforeEach(() =>{
-        cy.visit('http://localhost:5000/'); // where your web server + HTML is hosted
+        cy.visit('http://application:5000/'); // where your web server + HTML is hosted
     });
 
     it('Type full data for existing person and check presence in result', function() {
