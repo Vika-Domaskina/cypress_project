@@ -1,6 +1,7 @@
 describe('Check filtering on the page', function() {
     beforeEach(() =>{
-        cy.visit('http://application:5000/'); // where your web server + HTML is hosted
+        let target_host = Cypress.env('TARGET_HOST');
+        cy.visit(`http://${target_host}:5000/`); // where your web server + HTML is hosted
     });
 
     it('Type full data for existing person and check presence in result', function() {

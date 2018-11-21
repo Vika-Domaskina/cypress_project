@@ -3,7 +3,8 @@ describe('Check state on the page', function() {
     let getCrewMemberByName = (name) => cy.contains(name).parents('.CrewMember-container') ;
 
     beforeEach(() => {
-        cy.visit('http://application:5000/');
+        let target_host = Cypress.env('TARGET_HOST');
+        cy.visit(`http://${target_host}:5000/`);
     });
 
     it('Change state for person from "Applied" to "Interviewing"', function() {
